@@ -6,7 +6,7 @@ flush privileges;
 create table madeline.usuario(
  idusuario int auto_increment,
  correo varchar(30) not null, 
- conteasenna double not null,
+ conteasenna varchar(30) not null,
  primary key(`idusuario`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -24,7 +24,12 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_eo_0900_ai_ci;
 
+insert into madeline.usuario (idusuario,correo,conteasenna) values
+(1,'prueba','123456');
 
+drop table madeline.usuario;
+
+select * from madeline.usuario;
 
 
 
