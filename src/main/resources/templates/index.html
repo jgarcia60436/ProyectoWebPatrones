@@ -1,27 +1,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
+    <head th:replace="~{layout/plantilla :: head}">
         <title>Inicio || MadelineGarden</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/4086239380f418bfdadf7fd6ee566361.png">
+        <meta charset="UTF-8"/>
     </head>
     <body>
-        <a th:href="@{/cliente/nuevo}">Registrarse</a>
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>Correo</th>
-                    <th>Contrasenna</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="usuario : ${usuarios}">
-                    <td>[[${usuario.correo}]]</td>
-                    <td>[[${usuario.conteasenna}]]</td>
-                </tr>
-            </tbody>
-        </table>
-
-
+        <header th:replace="~{layout/plantilla :: header}"></header>
 
     </body>
 </html>
