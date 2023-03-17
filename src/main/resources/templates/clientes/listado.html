@@ -6,12 +6,12 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        <h2>Listado de Clientes</h2> 
+        <h2>Listado de Usuarios</h2> 
         <br><hr>
         <a th:href="@{/usuario/nuevo}" 
            class="btn btn-primary"
-           ><i class="fas fa-user-plus"></i> Nuevo cliente</a>
-        <div th:if="${clientes != null and !clientes.empty}">
+           ><i class="fas fa-user-plus"></i> Nuevo usuario</a>
+        <div th:if="${usuario != null and !usuario.empty}">
             <table class="table table-strype">
                 <thead class="thead-dark">
                     <tr>
@@ -21,8 +21,8 @@
                 </thead>
                 <tbody>
                     <tr th:each="usuario : ${usuario}">
-                        <td>[[${cliente.correo}]]</td>
-                        <td>[[${cliente.conteasenna}]]</td>
+                        <td>[[${usuario.correo}]]</td>
+                        <td>[[${usuario.conteasenna}]]</td>
                         <td><a th:href="@{/usuario/eliminar/}+${usuario.idusuario}"
                                class="btn btn-danger">
                                 <i class="fas fa-trash"></i> Eliminar</a>
@@ -34,7 +34,7 @@
                 </tbody>
             </table>
         </div>
-        <div th:if="${usuario == null or clientes.empty}">
+        <div th:if="${usuario == null or usuario.empty}">
             <h3>No hay clientes que mostrar</h3>
             
         </div>

@@ -32,7 +32,7 @@ public class UsuarioController {
         return "redirect:/usuario/listado";
     }
     
-    @GetMapping("/cliente/modificar/{idusuario}")
+    @GetMapping("/usuario/modificar/{idusuario}")
     public String modificaCliente(Usuario usuario, Model model) {
         usuario = uService.getUsuario(usuario);
         model.addAttribute("usuario", usuario);
