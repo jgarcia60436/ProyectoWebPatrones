@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
       xmlns:th="http://www.thymeleaf.org">
     <head th:fragment="head">
+        <title>MadelineGarden</title>
         <meta charset="UTF-8"/>
         <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
         <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
@@ -27,19 +29,19 @@
                         <!-- Links -->
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Inicio</a>
+                                <a class="nav-link active" href="/inicio/listado">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Catalogo</a>
+                                <a class="nav-link active" href="/catalogo/listado">Catalogo</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Arreglos y detalles</a>
+                                <a class="nav-link active" href="/arreglos/listado">Arreglos y detalles</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Ubicacion</a>
+                                <a class="nav-link active" href="/ubicacion/listado">Ubicacion</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Favoritos</a>
+                                <a class="nav-link active" href="/favoritos/listado">Favoritos</a>
                             </li>
                         </ul>
                         <!-- Links -->
@@ -59,19 +61,19 @@
                             </li>
                             <li class="nav-item me-3 me-lg-0 dropdown">
                                 <a  class="nav-link dropdown-toggle"
-                                    href="#">
+                                    href="/usuario/listado">
                                     <i class="fas fa-user"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="#">Ingresar</a>
+                                        <a class="dropdown-item" href="/ingresar/listado">Ingresar</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">Registrarse</a>
+                                        <a class="dropdown-item" href="/registrarse/listado">Registrarse</a>
                                     </li>
                                     <li><hr class="dropdown-divider" /></li>
                                     <li>
-                                        <a class="dropdown-item" href="#">Perfil</a>
+                                        <a class="dropdown-item" href="/perfil/listado">Perfil</a>
                                     </li>
                                 </ul>
                             </li>

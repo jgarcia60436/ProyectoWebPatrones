@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head th:replace="~{layout/plantilla :: head}">
+        <title>MadelineGarden</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <h2>Datos de Cliente</h2>
+        <br><hr>
+        <a th:href="@{/}">Regresar</a>
+        
+        <form th:action="@{/usuario/guardar}"
+              method="post"
+              th:object="${usuario}">
+            <input type="hidden" name="idusuario" th:field="*{idusuario}"/>
+            <br>
+            <label>Nombre</label>
+            <input type="text" name="correo" value="" th:field="*{correo}" size="30" />
+            <br>
+            <label>Apellidos</label>
+            <input type="text" name="conteasenna" value="" th:field="*{conteasenna}" size="40" />
+            <br>
+            
+            <input type="submit" value="Guardar">
+        </form>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
