@@ -29,7 +29,7 @@
                         <!-- Links -->
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="/inicio/inicio">Inicio</a>
+                                <a class="nav-link active" href="/">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="/catalogo/catalogo">Catalogo</a>
@@ -42,7 +42,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="/favoritos/favoritos">Favoritos</a>
-                            
                         </ul>
                         <!-- Links -->
                     </div>
@@ -54,14 +53,13 @@
                                     <i class="fas fas fa-search"></i>
                                 </a>
                             </li>
-                            <li class="nav-item me-3 me-lg-0">
+                            <li class="nav-item me-2 me-lg-0">
                                 <a class="nav-link" href="#">
                                     <i class="fas fa-shopping-cart"></i>
                                 </a>
                             </li>
-                            <li class="nav-item me-3 me-lg-0 dropdown">
-                                <a  class="nav-link dropdown-toggle"
-                                    th:href="@{/usuario/listado}">
+                            <li class="nav-item me-3 me-lg-0 p-0 dropdown">
+                                <a  class="nav-link dropdown-toggle p-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-user"></i>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -74,6 +72,15 @@
                                     <li><hr class="dropdown-divider" /></li>
                                     <li>
                                         <a class="dropdown-item" href="/perfil/">Perfil</a>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <form th:action="@{/logout}" method="post" class="mb-0">
+                                                <li class="dropdown-item" onclick="this.parentNode.submit();">
+                                                    Salir
+                                                </li>
+                                            </form>
+                                        </div>
                                     </li>
                                 </ul>
                             </li>
