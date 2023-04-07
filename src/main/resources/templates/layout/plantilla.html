@@ -13,7 +13,7 @@
     <body>
         <header th:fragment="header" class="header">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
                 <!-- Container logo -->
                 <div class="container">
                     <!-- Navbar brand -->
@@ -76,7 +76,7 @@
                                     <li>
                                         <div>
                                             <form th:action="@{/logout}" method="post" class="mb-0">
-                                                <li class="dropdown-item" onclick="this.parentNode.submit();">
+                                                <li class="dropdown-item btn" onclick="this.parentNode.submit();">
                                                     Salir
                                                 </li>
                                             </form>
