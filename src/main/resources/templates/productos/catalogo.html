@@ -1,0 +1,30 @@
+<html>
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio || MadelineGarden</title>
+        <link rel="shortcut icon" href="img/4086239380f418bfdadf7fd6ee566361.png">
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <div class="container">
+            <div class="container">            
+                <div class="row row-cols-3">               
+                    <div class="card" th:each="producto : ${producto}">                    
+                        <div class="card-body">                        
+                            <img th:src="${producto.imagen}" width="200px"/>                        
+                            <h5 class="card-title">[[${producto.descripcion}]]</h5>                        
+                            <h6 class="card-subtitle mb-2 text-muted text-end">                            
+                                [[${producto.precio}]]
+                            </h6>                        
+                            <a class="card-link" th:href="@{/carrito/comprar/} + ${producto.idArticulo}">                            
+                                Comprar</a>                        
+                            <p class="card-text">[[${producto.caracteristicas}]]</p>                    
+                        </div>                
+                    </div>            
+                </div>        
+            </div>
+        </div>
+
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
