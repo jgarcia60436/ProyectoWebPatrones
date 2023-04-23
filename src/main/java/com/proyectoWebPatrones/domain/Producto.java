@@ -23,7 +23,7 @@ public class Producto {
     private long idproducto;
 
     
-    private String nombreProducto;
+    private String nombreproducto;
     private double precio;
     private String descripcion;
     private String cuidado;
@@ -33,8 +33,8 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(String nombreProducto, double precio, String descripcion, String cuidado, String caracteristicas, String imagen) {
-        this.nombreProducto = nombreProducto;
+    public Producto(String nombreproducto, double precio, String descripcion, String cuidado, String caracteristicas, String imagen) {
+        this.nombreproducto = nombreproducto;
         this.precio = precio;
         this.descripcion = descripcion;
         this.cuidado = cuidado;

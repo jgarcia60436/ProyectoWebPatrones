@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -25,4 +26,29 @@ public class ProductoController {
         model.addAttribute("productos",productos);
         return "/productos/catalogo"; 
     }
+    
+    @GetMapping("/producto/nuevo")
+    public String nuevoProducto(Producto producto){
+        return "/producto/modifica";
+    }
+    
+    @PostMapping("/producto/guardar")
+    public String guardarProducto(Producto producto){
+        ps.saveProducto(producto);
+        return "redirect:/producto/listado";
+    }
+    
+    @GetMapping("/producto/modificar/{idproducto}")
+    public String modificaProducto(Producto producto, Model model) {
+        producto = ps.getProducto(producto);
+        model.addAttribute("producto", producto);
+        return "/producto/modifica";
+    }
+    
+    @GetMapping("/producto/eliminar/{idproducto}")
+    public String eliminaProducto(Producto producto) {
+        ps.deleteProducto(producto);
+        return "redirect:/producto/listado";
+    }
+    
 }
