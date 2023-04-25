@@ -6,26 +6,26 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>nombreproducto</th>
-                    <th>precio</th>
-                    <th>descripcion</th>
-                    <th>cuidado</th>
-                    <th>caracteristicas</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="producto : ${productos}">
-                    <td>[[${producto.nombreproducto}]]</td>
-                    <td>[[${producto.precio}]]</td>
-                    <td>[[${producto.descripcion}]]</td>
-                    <td>[[${producto.cuidado}]]</td>
-                    <td>[[${producto.caracteristicas}]]</td>
-                </tr>
-            </tbody>
-        </table>
-        
-    </body>
+
+        <!-- Card -->
+        <div class="container" style="margin-top: 5%;">
+             <div class="container">            
+            <div class="row row-cols-3">               
+                <div class="card m-3" th:each="producto : ${productos}">                    
+                    <div class="card-body p-2">
+                        <div class="p-5">
+                            <img th:src="${producto.imagen}" width="70px"/>                        
+                            <h5 class="card-title">[[${producto.nombreproducto}]]</h5>                        
+                            <h6 class="card-subtitle mb-2 text-muted text-end">[[${producto.precio}]]</h6>                        
+                            <a class="card-link" th:href="@{/carrito/comprar/} + ${producto.idproducto}">Comprar</a>                        
+                            <p class="card-text">[[${producto.nombreproducto}]]</p>   
+                        </div>            
+                    </div>                
+                </div>            
+            </div>        
+        </div>
+    </div>
+    <!-- Card -->
+
+</body>
 </html>
