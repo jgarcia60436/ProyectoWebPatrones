@@ -14,72 +14,38 @@
             <h1 class="mb-3 text-white">Suculentas, cactus y arreglos</h1>
             <h4 class="mb-3 text-white">Realiza tu compra aqui y las llevaremos hasta a tu casa</h4>
             <a class="btn btn-dark btn-lg bg-ligh" href="#!" role="button">Telefono</a>
-            <a class="btn btn-dark btn-lg bg-ligh" href="#!" role="button">Ver todos los productos</a>
+            <a class="btn btn-dark btn-lg bg-ligh" href="productos/catalogo" role="button">Ver todos los productos</a>
             <a class="btn btn-dark btn-lg bg-ligh" href="#!" role="button">Whatsapp</a>
         </div>
         <!-- Hero -->
+
         <!-- Container -->
-        <div class="container text-center justify-content-center">
-            <h1 class="p-5">Lo mas vendido</h1>
-            <div class="row align-items-center">
-                <a class ="p-5 col" href="url">
-                    <img width="150" height="150" src="img/Planta.jpg" alt=""/>
-                    <p class="active">Suculenta</p>
-                </a>
-                <a class ="p-5 col" href="url">
-                    <img width="150" height="150" src="img/Planta.jpg" alt=""/>
-                    <p class="active">Suculenta</p>
-                </a>
-                <a class ="p-5 col" href="url">
-                    <img width="150" height="150" src="img/Planta.jpg" alt=""/>
-                    <p class="active">Suculenta</p>
-                </a>
-                <a class ="p-5 col" href="url">
-                    <img width="150" height="150" src="img/Planta.jpg" alt=""/>
-                    <p class="active">Suculenta</p>
-                </a>
-                <a class ="p-5 col" href="url">
-                    <img width="150" height="150" src="img/Planta.jpg" alt=""/>
-                    <p class="active">Suculenta</p>
-                </a>
-                <a class ="p-5 col" href="url">
-                    <img width="150" height="150" src="img/Planta.jpg" alt=""/>
-                    <p class="active">Suculenta</p>
-                </a>
+        <div class="carousel slide p-5" data-bs-ride="carousel">
+            <div class="carousel-inner" th:each="producto : ${productos}>
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="../static/img/Planta.jpg" class="d-block w-40" alt="Imagen 1">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../static/img/Planta.jpg" class="d-block w-40" alt="Imagen 2">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../static/img/Planta.jpg" class="d-block w-40" alt="Imagen 3">
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
         <!-- Container -->
 
 
-        <!--<!-- Aqui va el footer con la informacion del la compañia -->
-        
-  
-            <div class="container-fluid">
-                <div class="row p-7 bg-secondary tex-white">
-                    
-                    <div class="col-xs-12 col-md-6 col-lg-3">
-                        <p class="h3 text-white">Ubicacion</p>
-                        <a href="https://goo.gl/maps/LANqVx9Ea3HyjfcM7" target="_blank">Dirección</a>
-                    </div>
-                    <div class="col-xs-12 col-md-6  col-lg-3 ">
-                        <p class="mb-3 h3 text-white">Contactos</p>
-                        <div class="mb-3" >
-                            <a  href="https://www.facebook.com/madelingardengt"class=" h5 fab fa-facebook-f"target="_blank"></a>
-                        </div>
-                        <div class="mb-3">
-                         <a href="https://www.instagram.com/madelinegardengt/" class=" h5 fab fa-instagram"target="_blank"></a>
-                        </div>
-                        
-                    </div>
-                    <div class="mb-3 col-xs-12">
-                        <p class="text-white">Información</p>
-                            <p>MadelineGarden es una florería encantadora que ofrece una amplia variedad de arreglos florales y plantas para satisfacer todas las necesidades de sus clientes.
-                                Con años de experiencia en el diseño y creación de arreglos florales personalizados,
-                                MadelineGarden se enorgullece de crear piezas únicas y hermosas para cada ocasión</p>
-                        </div>
-                    </div> 
-                    
-                </div>
-           
+        <!-- Footer -->
+        <footer th:replace="~{layout/plantilla :: footer}"></footer>
+        <!-- Footer -->   
     </body>
 </html>
