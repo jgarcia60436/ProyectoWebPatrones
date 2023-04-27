@@ -21,3 +21,52 @@ body{
     padding-left: 30px;
     padding-top: 20px;
 }
+
+.search-container {
+  display: flex;
+  justify-content: flex-end; /* Cambié la alineación a la derecha */
+  margin-right: 20px; /* Añadí un margen para separar del borde derecho */
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-container button[type=submit] {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-left: 5px; /* Añadí un margen para separar del cuadro de búsqueda */
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos adicionales */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.bg-customgray {
+    background-color: #8e8e8e; /* Cambiar este valor por el gris deseado */
+}
+.card-body {
+  position: relative;
+  z-index: 2;
+}

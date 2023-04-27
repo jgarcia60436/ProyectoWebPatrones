@@ -9,8 +9,8 @@
         
         <section th:fragment="listadoCarrito" class="contenido">
         <div>
-            <h3>[[${carrito.carrito}]]</h3><br>
-                <h4><a>[[${carrito.continuar}]]</a></h4><br>          
+           <h3>[[#{carrito.carrito}]]</h3><br>
+                <h4><a>[[#{carrito.continuar}]]</a></h4><br>          
         </div>
         <div class="row row-cols-3" 
                      th:if="${productos != null and !productos.empty}">
@@ -32,7 +32,7 @@
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </form>
-                            <p class="card-text">[[${producto.descripcion}]]</p>                            
+                            <p class="card-text">[[#{producto.descripcion}]]</p>                            
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card text-center bg-primary text-white mb-3">
+                        <div class="card text-center bg-customgray text-dark mb-3">
                             <div class="card-body">
                                 <h3>[[#{carrito.totalCompra}]]</h3>
                                 <h4 class="fs-4">
@@ -108,18 +108,18 @@
                                 </h4>
                             </div>
                         </div>
-                        <div class="card text-center bg-success text-white mb-3">
+                        <div class="card text-center bg-customgray text-white mb-3">
                             <div class="card-body">
                                 <a th:href="@{/}"
-                                   class="btn btn-success">
+                                   class="btn btn-gray">
                                     <i class='fas fa-reply'></i> [[#{carrito.seguirComprando}]]
                                 </a>
                             </div>
                         </div>
-                        <div class="card text-center bg-info text-white mb-3">
+                        <div class="card text-center bg-customgray text-white mb-3">
                             <div class="card-body">
                                 <a th:href="@{/facturar/carrito}"
-                                   class="btn btn-info">
+                                   class="btn btn-gray">
                                     <i class='fas fa-fordward'></i> [[#{carrito.facturar}]]
                                 </a>
                             </div>
