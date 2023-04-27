@@ -11,15 +11,15 @@
         <header th:replace="~{layout/plantilla :: header}"></header>
         <!-- Hero -->
         <div class="p-5 text-center bg-image rounded-1" style="background-image: url(img/PngHero.png)" height="500px">
-            <h1 class="mb-3 text-white">Suculentas, cactus y arreglos</h1>
-            <h4 class="mb-3 text-white">Realiza tu compra aqui y las llevaremos hasta a tu casa</h4>
-            <a class="btn btn-dark btn-lg bg-ligh" href="#!" role="button">Telefono</a>
-            <a class="btn btn-dark btn-lg bg-ligh" href="productos/catalogo" role="button">Ver todos los productos</a>
-            <a class="btn btn-dark btn-lg bg-ligh" href="#!" role="button">Whatsapp</a>
+            <h1 class="mb-3 text-white">[[${plantilla.text1}]]</h1>
+            <h4 class="mb-3 text-white">[[${plantilla.text2}]]</h4>
+            <a class="btn btn-dark btn-lg bg-ligh" href="#!" role="button">[[${cliente.telefono}]]</a>
+            <a class="btn btn-dark btn-lg bg-ligh" href="productos/catalogo" role="button">[[${plantilla.verproduc}]]</a>
+            <a class="btn btn-dark btn-lg bg-ligh" href="#!" role="button">WhatsApp</a>
         </div>
         <!-- Hero -->
 
-        <h2 class="p-5 text-center">Lo mas vendido</h2>
+        <h2 class="p-5 text-center">[[${plantilla.masvendido}]]</h2>
 
         <!-- Card -->
         <div class="container p-2">
@@ -31,9 +31,9 @@
                                 <img th:src="${producto.imagen}" width="70px"/>                        
                                 <h5 class="card-title">[[${producto.nombreproducto}]]</h5>                        
                                 <h6 class="card-subtitle mb-2 text-muted text-end">₡[[${producto.precio}]]</h6>                        
-                                <a class="card-link text-decoration-none" th:href="@{/carrito/agregar/} + ${producto.idProducto}">Comprar</a>                        
+                                <a class="card-link text-decoration-none" th:href="@{/carrito/agregar/} + ${producto.idProducto}">[[${producto.precio}]]Comprar</a>                        
                                 <p class="card-text">[[${producto.descripcion}]]</p>
-                                <h6 class="card-title">Reseña popular</h6>
+                                <h6 class="card-title">[[${producto.precio}]]Reseña popular</h6>
                                 <p class="card-text">[[${producto.resenna}]]</p>
                             </div>            
                         </div>                

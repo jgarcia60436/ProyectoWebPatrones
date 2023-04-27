@@ -1,6 +1,23 @@
-
+*{
+    margin:0;
+    box-sizing: border-box;
+    padding: 0;
+}
 
 body{
     padding-top: 1.5rem;
     
+}
+.titulo{
+    
+}
+
+.contenido{
+    position: fixed;
+    top: 82px;
+    left: 20%;
+    right: 0;
+    bottom: 0;
+    padding-left: 30px;
+    padding-top: 20px;
 }

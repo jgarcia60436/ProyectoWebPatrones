@@ -7,10 +7,10 @@
     </head>
     <body>
         
-        <section th:fragment="listadoCarrito">
+        <section th:fragment="listadoCarrito" class="contenido">
         <div>
-            <h3>Carrito de compras</h3><br>
-                <h4><a>Continuar comprando</a></h4><br>          
+            <h3>[[${carrito.carrito}]]</h3><br>
+                <h4><a>[[${carrito.continuar}]]</a></h4><br>          
         </div>
         <div class="row row-cols-3" 
                      th:if="${productos != null and !productos.empty}">

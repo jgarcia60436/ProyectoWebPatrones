@@ -10,25 +10,25 @@
         <br><hr>
         <a th:href="@{/usuario/nuevo}" 
            class="btn btn-primary"
-           ><i class="fas fa-user-plus"></i> Nuevo usuario</a>
+           ><i class="fas fa-user-plus"></i> [[${cliente.nuevou}]]</a>
         <div th:if="${usuario != null and !usuario.empty}">
             <table class="table table-strype">
                 <thead class="thead-dark">
                     <tr>
-                        <th>correo</th>
-                        <th>conteasenna</th>
+                        <th>[[${cliente.correo}]]</th>
+                        <th>[[${login.password}]]</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="usuario : ${usuario}">
-                        <td>[[${usuario.correo}]]</td>
-                        <td>[[${usuario.conteasenna}]]</td>
+                        <td>[[${cliente.correo}]]</td>
+                        <td>[[${cliente.conteasenna}]]</td>
                         <td><a th:href="@{/usuario/eliminar/}+${usuario.idusuario}"
                                class="btn btn-danger">
-                                <i class="fas fa-trash"></i> Eliminar</a>
+                                <i class="fas fa-trash"></i>[[${accion.eliminar}]] </a>
                             <a th:href="@{/usuario/modificar/}+${usuario.idCliente}"
                                class="btn btn-success">
-                                <i class="fas fa-pencil"></i> Modificar</a>
+                                <i class="fas fa-pencil"></i>[[${accion.modificar}]] </a>
                         </td>
                     </tr>
                 </tbody>
