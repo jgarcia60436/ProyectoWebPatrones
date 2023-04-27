@@ -83,6 +83,7 @@ drop table madeline.arreglos;
 
 select * from madeline.usuario;
 select * from madeline.productos;
+select * from madeline.detalles;
 
 
 
