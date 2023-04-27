@@ -10,7 +10,7 @@ public class Item extends Producto {
     }
 
     public Item(Producto producto) {
-        super.setIdproducto(producto.getIdproducto());
+        super.setIdProducto(producto.getIdProducto());
         //super.setCategoria(producto.getCategoria());//---- hacer categoria-- credito
         super.setNombreproducto(producto.getNombreproducto());
         super.setDescripcion(producto.getDescripcion());

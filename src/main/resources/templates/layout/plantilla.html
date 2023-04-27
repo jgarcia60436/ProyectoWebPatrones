@@ -28,7 +28,7 @@
                         <!-- Links -->
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="/">Inicio</a>
+                                <a class="nav-link active" href="/">[[#{plantilla.inicio}]]</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="/productos/catalogo">Catalogo</a>
@@ -59,7 +59,7 @@
                                 </a>
                             </li>
                             <li class="nav-item me-2 me-lg-0">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" th:href="@{/carrito/listado}">
                                     <i class="fas fa-shopping-cart"></i>
                                 </a>
                             </li>

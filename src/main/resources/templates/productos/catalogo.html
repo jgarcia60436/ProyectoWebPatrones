@@ -20,7 +20,7 @@
                                 <img th:src="${producto.imagen}" width="70px"/>                        
                                 <h5 class="card-title">[[${producto.nombreproducto}]]</h5>                        
                                 <h6 class="card-subtitle mb-2 text-muted text-end">[[${producto.precio}]]</h6>                        
-                                <a class="card-link text-decoration-none" th:href="@{/carrito/listado/} + ${producto.idproducto}">Comprar</a>                        
+                                <a class="card-link text-decoration-none" th:href="@{/carrito/agregar/} + ${producto.idProducto}">Comprar</a>                        
                                 <p class="card-text">[[${producto.descripcion}]]</p>   
                             </div>            
                         </div>                
