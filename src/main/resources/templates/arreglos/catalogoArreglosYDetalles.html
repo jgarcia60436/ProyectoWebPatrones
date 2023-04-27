@@ -1,17 +1,60 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{layout/plantilla :: head}">
-    <title>Inicio || MadelineGarden</title>
-    <link rel="shortcut icon" href="img/4086239380f418bfdadf7fd6ee566361.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-          <meta charset="UTF-8"/>
-<body class="pt-5" >
-    <!-- Header -->
-    <header th:replace="~{layout/plantilla :: header}"></header>
-    <!-- Hero -->
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio || MadelineGarden</title>
+        <link rel="shortcut icon" href="img/4086239380f418bfdadf7fd6ee566361.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+              <meta charset="UTF-8"/>
+    </head>
+    <body class="pt-5" >
+        <!-- Header -->
+        <header th:replace="~{layout/plantilla :: header}"></header>
+        <!-- Hero -->
+
+        <h2 class="p-5 text-center">Detalles</h2>
+
+        <!-- Card -->
+        <div class="container p-2">
+            <div class="container">            
+                <div class="row row-cols-4 justify-content-evenly" style="margin-bottom: 5%;">               
+                    <div class="card m-1" th:each="detalle : ${detalles}">                    
+                        <div class="card-body p-2">
+                            <div class="p-2">
+                                <img th:src="${detalle.imagen}" width="70px"/>                        
+                                <h5 class="card-title">[[${detalle.nombreproducto}]]</h5>                        
+                                <h6 class="card-subtitle mb-2 text-muted text-end">₡[[${detalle.precio}]]</h6>                        
+                                <a class="card-link text-decoration-none" th:href="@{/carrito/listado/} + ${detalle.iddetalle}">Comprar</a>
+                            </div>            
+                        </div>                
+                    </div>            
+                </div>        
+            </div>
+        </div>
+        <!-- Card -->
+
+        <h2 class="p-5 text-center">Arreglos</h2>
+
+        <!-- Card -->
+        <div class="container p-2">
+            <div class="container">            
+                <div class="row row-cols-4 justify-content-evenly" style="margin-bottom: 5%;">               
+                    <div class="card m-1" th:each="arreglo : ${arreglo}">                    
+                        <div class="card-body p-2">
+                            <div class="p-2">
+                                <img th:src="${arreglo.imagen}" width="70px"/>                        
+                                <h5 class="card-title">[[${arreglo.nombreproducto}]]</h5>                        
+                                <h6 class="card-subtitle mb-2 text-muted text-end">₡[[${arreglo.precio}]]</h6>                        
+                                <a class="card-link text-decoration-none" th:href="@{/carrito/listado/} + ${arreglo.idarreglo}">Comprar</a>
+                            </div>            
+                        </div>                
+                    </div>            
+                </div>        
+            </div>
+        </div>
+        <!-- Card -->
 
 
-    <!-- Footer -->
-    <footer th:replace="~{layout/plantilla :: footer}"></footer>
-    <!-- Footer -->  
-</body>
+        <!-- Footer -->
+        <footer th:replace="~{layout/plantilla :: footer}"></footer>
+        <!-- Footer -->  
+    </body>
 </html>
