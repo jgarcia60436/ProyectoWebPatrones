@@ -28,17 +28,19 @@ public class Producto {
     private String cuidado;
     private String caracteristicas;
     private String imagen;
+    private String resenna;
 
     public Producto() {
     }
 
-    public Producto(String nombreproducto, double precio, String descripcion, String cuidado, String caracteristicas, String imagen) {
+    public Producto(String nombreproducto, double precio, String descripcion, String cuidado, String caracteristicas, String imagen, String resenna) {
         this.nombreproducto = nombreproducto;
         this.precio = precio;
         this.descripcion = descripcion;
         this.cuidado = cuidado;
         this.caracteristicas = caracteristicas;
         this.imagen = imagen;
+        this.resenna = resenna;
     }
-    
+
 }
