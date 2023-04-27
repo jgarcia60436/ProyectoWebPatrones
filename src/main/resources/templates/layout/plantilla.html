@@ -53,14 +53,10 @@
                         <ul class="navbar-nav d-flex flex-row">
                             <li class="nav-item me-3 me-lg-0">
                                 <div class="search-container">
-  <form action="/search">
-    <input type="text" placeholder="Search..." name="search">
-    <button type="submit">Search</button>
-  </form>
-</div>
-                                <a class="nav-link" href="#">
-                                    <i class="fas fas fa-search"></i>
-                                </a>
+                                    <form action="/search">
+                                      <input type="text" placeholder="Search..." name="search" class="form-control">
+                                    </form>
+                                  </div>
                             </li>
                             <li class="nav-item me-2 me-lg-0">
                                 <a class="nav-link" th:href="@{/carrito/listado}">
