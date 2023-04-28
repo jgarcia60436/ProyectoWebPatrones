@@ -20,19 +20,19 @@ public class ArregloController {
     @Autowired
     private ArregloService a;
     
-    @GetMapping("/catalogoArreglosYDetalles")
+    @GetMapping("/catalogo")
     public String inicio(Model model) {
         var arreglos = a.getArreglos(); 
         model.addAttribute("arreglos",arreglos);
-        return "/arreglos/catalogoArreglosYDetalles"; 
+        return "/arreglos/catalogo"; 
     }
     
     @GetMapping("/arreglo/agregar")
     public String nuevoArreglo(Arreglo arreglo){
-        return "/arreglo/catalogoArreglosYDetalles";
+        return "/arreglo/catalogo";
     }
     
-    @PostMapping("/arreglo/catalogoArreglosYDetalles")
+    @PostMapping("/arreglo/catalogo")
     public String guardarArreglo(Arreglo arreglo){
         a.saveArreglo(arreglo);
         return "redirect:/arreglo/guardar";
@@ -42,13 +42,13 @@ public class ArregloController {
     public String modificaArreglo(Arreglo arreglo, Model model) {
         arreglo = a.getArreglo(arreglo);
         model.addAttribute("arreglo", arreglo);
-        return "/arreglo/catalogoArreglosYDetalless";
+        return "/arreglo/catalogos";
     }
     
     @GetMapping("/arreglo/eliminar/{idarreglo}")
     public String eliminaArreglo(Arreglo arreglo) {
         a.deleteArreglo(arreglo);
-        return "redirect:/arreglo/catalogoArreglosYDetalles";
+        return "redirect:/arreglo/catalogo";
     }
     
 }

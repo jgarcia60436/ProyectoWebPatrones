@@ -56,13 +56,13 @@ insert into madeline.arreglos(idarreglo,nombreproducto,precio,imagen) values
 (4,'Corazon con suculentas',340.00,'http://surl.li/gqesg')
 ;
 
-insert into madeline.detalles(iddetalle,nombreproducto,precio,imagen) values
-(1,'Ramo de suculentas','1340.00','http://surl.li/gqfbw'),
-(2,'Regalo surtido de suculentas','1450.00','http://surl.li/gqfcn'),
-(3,'Ramo de novia','1800.00','http://surl.li/gqfcz'),
-(4,'Ramo de suculentas','1500.00','http://surl.li/gqfda'),
-(5,'Mini ramo de suculentas','1400.00','http://surl.li/gqfdc'),
-(6,'Detalle de flores y suculentas','3500.00','http://surl.li/gqfdg')
+insert into madeline.arreglos(idarreglo,nombreproducto,precio,imagen) values
+(5,'Ramo de suculentas','1340.00','http://surl.li/gqfbw'),
+(6,'Regalo surtido de suculentas','1450.00','http://surl.li/gqfcn'),
+(7,'Ramo de novia','1800.00','http://surl.li/gqfcz'),
+(8,'Ramo de suculentas','1500.00','http://surl.li/gqfda'),
+(9,'Mini ramo de suculentas','1400.00','http://surl.li/gqfdc'),
+(10,'Detalle de flores y suculentas','3500.00','http://surl.li/gqfdg')
 ;
 
 
@@ -72,4 +72,5 @@ drop table madeline.arreglos;
 
 
 select * from madeline.productos;
+select * from madeline.arreglos;
 select * from madeline.detalles;

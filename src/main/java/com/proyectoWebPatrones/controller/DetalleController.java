@@ -4,8 +4,8 @@
  */
 package com.proyectoWebPatrones.controller;
 
-import com.proyectoWebPatrones.domain.Detalle;
-import com.proyectoWebPatrones.services.DetalleService;
+import com.proyectoWebPatrones.domain.Arreglo;
+import com.proyectoWebPatrones.services.ArregloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,37 +18,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/detalles")
 public class DetalleController {
     @Autowired
-    private DetalleService a;
+    private ArregloService a;
     
-    @GetMapping("/catalogoArreglosYDetalles")
+    @GetMapping("/catalogo")
     public String inicio(Model model) {
-        var detalles = a.getDetalles(); 
+        var detalles = a.getArreglos(); 
         model.addAttribute("detalles",detalles);
-        return "/detalles/catalogoArreglosYDetalles"; 
+        return "/arreglos/catalogo"; 
     }
     
     @GetMapping("/detalle/agregar")
-    public String nuevoDetalle(Detalle detalle){
-        return "/detalle/catalogoArreglosYDetalles";
+    public String nuevoArreglo(Arreglo detalle){
+        return "/arreglos/catalogo";
     }
     
-    @PostMapping("/detalle/catalogoArreglosYDetalles")
-    public String guardarDetalle(Detalle detalle){
-        a.saveDetalle(detalle);
-        return "redirect:/detalle/guardar";
+    @PostMapping("/detalle/catalogo")
+    public String guardarArreglo(Arreglo detalle){
+        a.saveArreglo(detalle);
+        return "redirect:/arreglos/guardar";
     }
     
-    @GetMapping("/detalle/modificar/{iddetalle}")
-    public String modificaDetalle(Detalle detalle, Model model) {
-        detalle = a.getDetalle(detalle);
+    @GetMapping("/arreglos/modificar/{iddetalle}")
+    public String modificaArreglo(Arreglo detalle, Model model) {
+        detalle = a.getArreglo(detalle);
         model.addAttribute("detalle", detalle);
-        return "/detalle/catalogoArreglosYDetalless";
+        return "/arreglos/catalogos";
     }
     
     @GetMapping("/detalle/eliminar/{iddetalle}")
-    public String eliminaDetalle(Detalle detalle) {
-        a.deleteDetalle(detalle);
-        return "redirect:/detalle/catalogoArreglosYDetalles";
+    public String eliminaArreglo(Arreglo detalle) {
+        a.deleteArreglo(detalle);
+        return "redirect:/arreglos/catalogo";
     }
     
 }
