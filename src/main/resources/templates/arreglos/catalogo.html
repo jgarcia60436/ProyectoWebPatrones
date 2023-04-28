@@ -10,7 +10,7 @@
         <header th:replace="~{layout/plantilla :: header}"></header>
         <!-- Hero -->
 
-        <h2 class="p-5 text-center">Arreglos y detalles</h2>
+        <h2 class="p-5 text-center">[[#{arreglo.arreglosDetalles}]]</h2>
         
         <!-- Card -->
         <div class="container p-2">
@@ -22,7 +22,7 @@
                                 <img th:src="${arreglo.imagen}" width="70px"/>                        
                                 <h5 class="card-title">[[${arreglo.nombreproducto}]]</h5>                        
                                 <h6 class="card-subtitle mb-2 text-muted text-end">₡[[${arreglo.precio}]]</h6>                        
-                                <a class="card-link text-decoration-none" th:href="@{/carrito/agregar/} + ${arreglo.idarreglo}">Comprar</a>
+                                <a class="card-link text-decoration-none" th:href="@{/carrito/agregar/} + ${arreglo.idarreglo}">[[#{productos.comprar}]]</a>
                             </div>            
                         </div>                
                     </div>            
@@ -41,7 +41,7 @@
                                 <img th:src="${detalle.imagen}" width="70px"/>                        
                                 <h5 class="card-title">[[${detalle.nombreproducto}]]</h5>                        
                                 <h6 class="card-subtitle mb-2 text-muted text-end">₡[[${detalle.precio}]]</h6>                        
-                                <a class="card-link text-decoration-none" th:href="@{/carrito/agregar/} + ${detalle.iddetalle}">Comprar</a>
+                                <a class="card-link text-decoration-none" th:href="@{/carrito/agregar/} + ${detalle.iddetalle}">[[#{productos.comprar}]]</a>
                             </div>            
                         </div>                
                     </div>            
